@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: 'sammy'
+  password: 'sammy123'
+  host: '127.0.0.1'
+  pool: 5
+
+development:
+  <<: *default
+  database: blog_application_development
+test:
+  <<: *default
+  database: blog_application_test
+production:
+  <<: *default
+  database: blog_application_production
